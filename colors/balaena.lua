@@ -1,4 +1,4 @@
-local c = require 'balena.colors'
+local c = require 'balaena.colors'
 
 
 local editor     = {}
