@@ -51,53 +51,63 @@ local colors = {
 -- "#b48ead"
 }
 
-local function example(param)
-    if param == 3 then
-        print("Hello world!")
-    end
+local editor     = {}
+local treesitter = {}
+local plugins    = {}
+
+vim.g.colors_name = "balaena"
+
+editor['Normal'] = { bg = colors.bg, fg = colors.fg }
+editor['NormalFloat'] = { bg = colors.bg, fg = colors.fg }
+
+editor['Visual'] = { bg = colors.selection }
+editor['CursorLine'] = { bg = colors.cursorline_bg }
+editor['LineNr'] = { fg = colors.line_nr }
+editor['CursorLineNr'] = { fg = colors.fg }
+
+editor['Search'] = { fg = colors.bg, bg = colors.snow_0 }
+editor['CurSearch'] = { fg = colors.bg, bg = colors.aurora_2 } -- TODO: change
+
+editor['FloatBorder'] = { fg = colors.border, bg = colors.bg }
+editor['WinSeparator'] = { fg = colors.border_blend }
+
+treesitter['@operator'] = { fg = colors.frost_3 }
+treesitter['@keyword'] = { fg = colors.frost_3 }
+
+treesitter['@number'] = { fg = colors.aurora_1 }
+
+treesitter['@variable'] = { fg = colors.snow_1 }
+treesitter['@property'] = { fg = colors.fg1 }
+
+treesitter['@function'] = { fg = colors.frost_1 }
+treesitter['@function.call'] = { fg = colors.frost_1 }
+
+treesitter['@string'] = { fg = colors.aurora_3 }
+
+treesitter['@type'] = { fg = colors.frost_2 }
+treesitter['@constructor'] = { fg = colors.frost_2 }
+treesitter['@type.builtin'] = { fg = colors.frost_2 }
+
+plugins['NoiceCmdlinePopupTitle'] = { fg = colors.snow_1 }
+plugins['NoiceCmdlinePopupBorder'] = { fg = colors.border }
+plugins['NoiceCmdlinePopupBorderSearch'] = { fg = colors.border }
+plugins['TelescopeBorder'] = { fg = colors.border }
+
+plugins['CmpItemSelected'] = { fg = colors.frost_2, reverse = true }
+plugins['CmpItemAbbr'] = { fg = colors.fg }
+plugins['CmpItemAbbrMatch'] = { fg = colors.snow_0, bold = true }
+plugins['CmpItemAbbrMatchFuzzy'] = { link = "CmpItemAbbrMatch" }
+plugins['CmpItemKind'] = { fg = colors.frost_2 }
+plugins['CmpItemMenu'] = { fg = colors.frost_3 }
+
+for k, v in pairs(editor) do
+    vim.api.nvim_set_hl(0, k, v)
 end
 
-example(1)
-example(2)
+for k, v in pairs(treesitter) do
+    vim.api.nvim_set_hl(0, k, v)
+end
 
-vim.api.nvim_set_hl(0, 'Normal', { bg = colors.bg, fg = colors.fg })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = colors.bg, fg = colors.fg })
--- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = colors.bg_light, fg = colors.fg })
-
-vim.api.nvim_set_hl(0, 'Visual', { bg = colors.selection })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = colors.cursorline_bg })
-vim.api.nvim_set_hl(0, 'LineNr', { fg = colors.line_nr })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.fg })
-
-vim.api.nvim_set_hl(0, 'Search', { fg = colors.bg, bg = colors.snow_0 })
-vim.api.nvim_set_hl(0, 'CurSearch', { fg = colors.bg, bg = colors.aurora_2 }) -- TODO: change
-
-vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupBorder', { fg = colors.border })
-vim.api.nvim_set_hl(0, 'TelescopeBorder', { fg = colors.border })
-vim.api.nvim_set_hl(0, 'FloatBorder', { fg = colors.border, bg = colors.bg })
-vim.api.nvim_set_hl(0, 'WinSeparator', { fg = colors.border_blend })
-
-vim.api.nvim_set_hl(0, '@operator', { fg = colors.frost_3 })
--- vim.api.nvim_set_hl(0, '@operator', { fg = colors.aurora_4 })
-vim.api.nvim_set_hl(0, '@keyword', { fg = colors.frost_3 })
-
-vim.api.nvim_set_hl(0, '@number', { fg = colors.aurora_1 })
-
-vim.api.nvim_set_hl(0, '@variable', { fg = colors.snow_1 })
-vim.api.nvim_set_hl(0, '@property', { fg = colors.fg1 })
-
-vim.api.nvim_set_hl(0, '@function', { fg = colors.frost_1 })
-vim.api.nvim_set_hl(0, '@function.call', { fg = colors.frost_1 })
-
-vim.api.nvim_set_hl(0, '@string', { fg = colors.aurora_3 })
-
-vim.api.nvim_set_hl(0, '@type', { fg = colors.frost_2 })
-vim.api.nvim_set_hl(0, '@constructor', { fg = colors.frost_2 })
-vim.api.nvim_set_hl(0, '@type.builtin', { fg = colors.frost_2 })
-
-vim.api.nvim_set_hl(0, 'CmpItemSelected', { fg = colors.frost_2, reverse = true })
-vim.api.nvim_set_hl(0, 'CmpItemAbbr', { fg = colors.fg })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { fg = colors.snow_0, bold = true })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = "CmpItemAbbrMatch" })
-vim.api.nvim_set_hl(0, 'CmpItemKind', { fg = colors.frost_2 })
-vim.api.nvim_set_hl(0, 'CmpItemMenu', { fg = colors.frost_3 })
+for k, v in pairs(plugins) do
+    vim.api.nvim_set_hl(0, k, v)
+end
