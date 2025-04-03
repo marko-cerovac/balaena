@@ -1,51 +1,51 @@
 local colors = {
     -- editor colors
-    bg = "#141a23",
-    bg_light = "#19202c",
+    bg            = "#141a23",
+    bg_light      = "#19202c",
 
-    fg = "#cce0e8",
-    fg1 = "#b1bbe5",
+    fg            = "#cce0e8",
+    fg1           = "#b1bbe5", -- TODO: remove this color
+    -- TODO: add stelthy text color
 
-    border = "#364155",
-    border_blend = "#1e242f",
+    -- TODO: add another stelthy border
+    border        = "#364155",
+    separator  = "#1e242f",
 
-    cursor = "#e4f8ff",
-    cursorline_bg = "#1b212d",
-    selection = "#232b3a",
+    cursor        = "#e4f8ff",
+    cursorline    = "#1b212d",
+    selection     = "#232b3a",
+    line_nr       = "#3b4154",
 
-    line_nr = "#313646",
+    -- TODO: choose new white colors
+    light_0  = "#d8dee9",
+    light_1  = "#e5e9f0",
+    light_2  = "#eceff4",
 
-    -- primary colors
-    light_cyan = "#a0f3e7",
-    dark_cyan = "#80d1c5",
+    grad_0  = "#99e2d7",
+    grad_1  = "#a0d2e1",
+    grad_2  = "#a0b7e1",
+    grad_3  = "#98a0e1",
 
-    light_purple = "#b395cf",
-    dark_purple = "#ae83bc",
+    red    = "#e68686",
+    orange = "#e8ae94",
+    yellow = "#e4e8a6",
+    green  = "#aae7b4",
+    purple = "#d0aae2",
 
-    snow_0 = "#d8dee9",
-    snow_1 = "#e5e9f0",
-    snow_2 = "#eceff4",
+    git = {
+        add    = "#a1f4a8",
+        modify = "#9bf0f3",
+        remove = "#f5a1a1",
+    },
 
-    frost_0  = "#9ececd",
-    frost_1  = "#98d2e2",
-    frost_2  = "#8fb1d4",
-    frost_3  = "#88acd7",
-    aurora_0 = "#d46973",
-    aurora_1 = "#e4957c",
-    aurora_2 = "#fbdda0",
-    aurora_3 = "#b3d09b",
-    aurora_4 = "#c69dbe",
-
--- "#8fbcbb"
--- "#88c0d0"
--- "#81a1c1"
--- "#7b9cc4"
---          
--- "#bf616a"
--- "#d08770"
--- "#ebcb8b"
--- "#a3be8c"
--- "#b48ead"
+    -- TODO: choose different colors
+    lsp = {
+        err = "#f6627e",
+        warn = "#e4d678",
+    },
 }
+
+colors.lsp['info'] = colors.grad_3
+colors.lsp['hint'] = colors.light_0
 
 return colors
