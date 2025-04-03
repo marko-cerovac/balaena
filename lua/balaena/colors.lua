@@ -1,30 +1,28 @@
 local colors = {
     -- editor colors
-    bg            = "#141a23",
-    bg_light      = "#19202c",
+    bg     = "#141a23",
+    bg_alt = "#19202c",
 
-    fg            = "#cce0e8",
-    fg1           = "#b1bbe5", -- TODO: remove this color
-    -- TODO: add stelthy text color
+    fg_0   = "#bfe3fa",
+    fg_1   = "#d2ebfb",
+    fg_2   = "#e3f5ff",
 
-    -- TODO: add another stelthy border
-    border        = "#364155",
-    separator  = "#1e242f",
+    cursor     = "#e4f8ff",
+    cursorline = "#1b212d",
+    selection  = "#232b3a",
 
-    cursor        = "#e4f8ff",
-    cursorline    = "#1b212d",
-    selection     = "#232b3a",
-    line_nr       = "#3b4154",
+    stealth_0 = "#353a4d", -- used for things that are disabled
+    stealth_1 = "#3b4154", -- used for line numbers
+    stealth_2 = "#444b65", -- used for comments
 
-    -- TODO: choose new white colors
-    light_0  = "#d8dee9",
-    light_1  = "#e5e9f0",
-    light_2  = "#eceff4",
+    border_0 = "#1e242f", -- discrete border, just visible enough to be present (used for window splits)
+    border_1 = "#242b38", -- a slightly more visible border for floating windows that need to blend in
+    border_2 = "#364155", -- lighter, clearly visible border (used most often)
 
-    grad_0  = "#99e2d7",
-    grad_1  = "#a0d2e1",
-    grad_2  = "#a0b7e1",
-    grad_3  = "#98a0e1",
+    grad_0 = "#98a0e1", -- also used as blue
+    grad_1 = "#a0b7e1",
+    grad_2 = "#a0d2e1",
+    grad_3 = "#99e2d7", -- also used as cyan
 
     red    = "#e68686",
     orange = "#e8ae94",
@@ -32,20 +30,18 @@ local colors = {
     green  = "#aae7b4",
     purple = "#d0aae2",
 
+    -- TODO: choose different colors
+    err  = "#eb6d85",
+    warn = "#dcd080",
+
     git = {
         add    = "#a1f4a8",
         modify = "#9bf0f3",
         remove = "#f5a1a1",
     },
-
-    -- TODO: choose different colors
-    lsp = {
-        err = "#f6627e",
-        warn = "#e4d678",
-    },
 }
 
-colors.lsp['info'] = colors.grad_3
-colors.lsp['hint'] = colors.light_0
+colors['info'] = colors.grad_3
+colors['hint'] = colors.fg_1
 
 return colors
