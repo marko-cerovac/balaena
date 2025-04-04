@@ -110,4 +110,21 @@ M.plugins = {
     NeogitCommitViewDescription   = { fg = c.grad_0 },
 }
 
+vim.g.terminal_color_0 = c.stealth_0
+vim.g.terminal_color_1 = c.red
+vim.g.terminal_color_2 = c.green
+vim.g.terminal_color_3 = c.yellow
+vim.g.terminal_color_4 = c.grad_0
+vim.g.terminal_color_5 = c.purple
+vim.g.terminal_color_6 = c.grad_3
+vim.g.terminal_color_7 = c.fg_1
+vim.g.terminal_color_8 = c.stealth_0
+vim.g.terminal_color_9 = c.red
+vim.g.terminal_color_10 = c.green
+vim.g.terminal_color_11 = c.yellow
+vim.g.terminal_color_12 = c.grad_0
+vim.g.terminal_color_13 = c.purple
+vim.g.terminal_color_14 = c.grad_3
+vim.g.terminal_color_15 = c.fg_2
+
 return M
