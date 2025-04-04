@@ -7,9 +7,9 @@ local colors = {
     fg_1   = "#d2ebfb",
     fg_2   = "#e3f5ff",
 
-    cursor     = "#e4f8ff",
-    cursorline = "#1b212d",
-    selection  = "#232b3a",
+    cursor    = "#e4f8ff",
+    cursor_ln = "#1b212d",
+    selection = "#232b3a",
 
     stealth_0 = "#353a4d", -- used for things that are disabled
     stealth_1 = "#3b4154", -- used for line numbers

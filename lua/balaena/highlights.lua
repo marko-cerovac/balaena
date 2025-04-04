@@ -5,17 +5,39 @@ local M  = {}
 M.editor = {
     Normal       = { bg = c.bg, fg = c.fg_2 },
     NormalFloat  = { bg = c.bg, fg = c.fg_2 },
+
+    ColorColumn  = { bg = c.cursor_ln },
+    Conceal      = { fg = c.stealth_0 },
+
+    ErrorMsg     = { fg = c.err },
+    WarningMsg   = { fg = c.warn },
+    Folded       = { fg = c.stealth_2 },
+    NonText      = { fg = c.stealth_0 },
+    SignColumn   = { fg = c.fg_0 },
+    Whitespace   = { fg = c.stealth_0 },
+
+    StatusLine   = { fg = c.fg_1, bg = c.bg },
+    StatusLineNC = { fg = c.stealth_0 },
+    Ignore       = { fg = c.stealth_0 },
+
+    Title        = { fg = c.fg_2 },
+
     Visual       = { bg = c.selection },
-    CursorLine   = { bg = c.cursorline },
+    CursorLine   = { bg = c.cursor_ln },
+    CursorColumn = { link = "CursorLine" },
     LineNr       = { fg = c.stealth_1 },
     CursorLineNr = { fg = c.fg_2 },
     Search       = { fg = c.bg, bg = c.fg_0 },
-    CurSearch    = { fg = c.bg, bg = c.yellow }, -- TODO: change
+    IncSearch    = { fg = c.bg, bg = c.fg_0, bold = true},
+    CurSearch    = { fg = c.bg, bg = c.yellow },
     FloatBorder  = { fg = c.border_2, bg = c.bg },
     WinSeparator = { fg = c.border_0 },
     Cursor       = { fg = c.cursor },
     TermCursor   = { fg = c.cursor },
+
+    PMenu        = { fg = c.fg_1, bg = c.bg_alt },
     PMenuSel     = { fg = c.grad_1, reverse = true },
+    PMenuThumb   = { bg = c.stealth_1 },
 
     DiffAdd      = { fg = c.git.add, reverse = true },
     DiffChange   = { fg = c.git.modify },
@@ -38,26 +60,29 @@ M.editor = {
     DiagnosticUnderlineError = { undercurl = true, sp = c.err },
     DiagnosticUnderlineWarn  = { undercurl = true, sp = c.warn },
     DiagnosticUnderlineInfo  = { undercurl = true, sp = c.info },
-    DiagnosticUnderlineHint  = { undercurl = true, sp = c.hint }
+    DiagnosticUnderlineHint  = { undercurl = true, sp = c.hint },
+    DiagnosticUnnecessary    = { fg = c.stealth_0, undercurl = true, sp = c.fg_1 },
 }
 
 
 M.treesitter = {
-    ['@operator']      = { fg = c.grad_0 },
     ['@comment']       = { fg = c.stealth_2 },
+    ['@operator']      = { fg = c.grad_0 },
     ['@punctuation']   = { fg = c.grad_0 },
     ['@keyword']       = { fg = c.grad_0 },
-    ['@number']        = { fg = c.orange },
-    ['@boolean']       = { fg = c.orange },
-    ['@variable']      = { fg = c.fg_2 },
-    ['@property']      = { fg = c.fg_0 },
-    ['@constant']      = { fg = c.fg_2 },
-    ['@function']      = { fg = c.grad_2 },
-    ['@function.call'] = { fg = c.grad_2 },
-    ['@string']        = { fg = c.green },
     ['@type']          = { fg = c.grad_1 },
     ['@constructor']   = { fg = c.grad_1 },
     ['@type.builtin']  = { fg = c.grad_1 },
+    ['@number']        = { fg = c.orange },
+    ['@boolean']       = { fg = c.orange },
+    ['@character']     = { fg = c.orange },
+    ['@variable']      = { fg = c.fg_2 },
+    ['@property']      = { fg = c.fg_0 },
+    ['@constant']      = { fg = c.fg_1 },
+    ['@function']      = { fg = c.grad_3 },
+    ['@function.call'] = { fg = c.grad_3 },
+    ['@string']        = { fg = c.green },
+    ['@module']        = { fg = c.grad_2 },
 }
 
 M.plugins = {
