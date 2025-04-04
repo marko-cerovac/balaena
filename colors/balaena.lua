@@ -16,7 +16,7 @@ for k, v in pairs(hl.editor) do
     vim.api.nvim_set_hl(0, k, v)
 end
 
-for k, v in pairs(hl.treesitter) do
+for k, v in pairs(hl.syntax) do
     vim.api.nvim_set_hl(0, k, v)
 end
 

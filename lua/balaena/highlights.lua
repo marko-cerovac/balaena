@@ -1,48 +1,59 @@
-local c  = require 'balaena.colors'
+-- local u  = require 'balaena.utils'
+local c = require 'balaena.colors'
+
 
 local M  = {}
 
 M.editor = {
-    Normal       = { bg = c.bg, fg = c.fg_2 },
-    NormalFloat  = { bg = c.bg, fg = c.fg_2 },
+    Normal        = { bg = c.bg, fg = c.fg_2 },
+    NormalFloat   = { bg = c.bg, fg = c.fg_2 },
 
-    ColorColumn  = { bg = c.cursor_ln },
-    Conceal      = { fg = c.stealth_0 },
+    ColorColumn   = { bg = c.cursor_ln },
+    Conceal       = { fg = c.stealth_0 },
 
-    ErrorMsg     = { fg = c.err },
-    WarningMsg   = { fg = c.warn },
-    Folded       = { fg = c.stealth_2 },
-    NonText      = { fg = c.stealth_0 },
-    SignColumn   = { fg = c.fg_0 },
-    Whitespace   = { fg = c.stealth_0 },
+    SpecialKey    = { fg = c.grad_3 },
+    ErrorMsg      = { fg = c.err },
+    WarningMsg    = { fg = c.warn },
+    Folded        = { fg = c.stealth_2 },
+    NonText       = { fg = c.stealth_0 },
+    SignColumn    = { fg = c.fg_0 },
+    Whitespace    = { fg = c.stealth_0 },
 
-    StatusLine   = { fg = c.fg_1, bg = c.bg },
-    StatusLineNC = { fg = c.stealth_0 },
-    Ignore       = { fg = c.stealth_0 },
+    StatusLine    = { fg = c.fg_1, bg = c.bg },
+    StatusLineNC  = { fg = c.stealth_0 },
+    Ignore        = { fg = c.stealth_0 },
 
-    Title        = { fg = c.fg_2 },
+    Title         = { fg = c.fg_2 },
 
-    Visual       = { bg = c.selection },
-    CursorLine   = { bg = c.cursor_ln },
-    CursorColumn = { link = "CursorLine" },
-    LineNr       = { fg = c.stealth_1 },
-    CursorLineNr = { fg = c.fg_2 },
-    Search       = { fg = c.bg, bg = c.fg_0 },
-    IncSearch    = { fg = c.bg, bg = c.fg_0, bold = true},
-    CurSearch    = { fg = c.bg, bg = c.yellow },
-    FloatBorder  = { fg = c.border_2, bg = c.bg },
-    WinSeparator = { fg = c.border_0 },
-    Cursor       = { fg = c.cursor },
-    TermCursor   = { fg = c.cursor },
+    MatchParen    = { fg = c.yellow, bold = true },
+    Visual        = { bg = c.selection },
+    CursorLine    = { bg = c.cursor_ln },
+    CursorColumn  = { link = "CursorLine" },
+    LineNr        = { fg = c.stealth_1 },
+    CursorLineNr  = { fg = c.fg_2 },
+    Search        = { fg = c.bg, bg = c.fg_0 },
+    IncSearch     = { fg = c.bg, bg = c.fg_0, bold = true },
+    CurSearch     = { fg = c.bg, bg = c.yellow },
+    -- qfFileName
+    -- qfLineNr
 
-    PMenu        = { fg = c.fg_1, bg = c.bg_alt },
-    PMenuSel     = { fg = c.grad_1, reverse = true },
-    PMenuThumb   = { bg = c.stealth_1 },
+    FloatBorder   = { fg = c.border_2, bg = c.bg },
+    WinSeparator  = { fg = c.border_0 },
+    Cursor        = { fg = c.cursor },
+    TermCursor    = { fg = c.cursor },
 
-    DiffAdd      = { fg = c.git.add, reverse = true },
-    DiffChange   = { fg = c.git.modify },
-    DiffDelete   = { fg = c.git.remove, reverse = true },
-    DiffText     = { fg = c.git.modify, reverse = true },
+    PMenu         = { fg = c.fg_1, bg = c.bg_alt },
+    PMenuSel      = { fg = c.grad_1, reverse = true },
+    PMenuThumb    = { bg = c.stealth_1 },
+
+    healthError   = { fg = c.err },
+    healthWarning = { fg = c.warn },
+    healthSuccess = { fg = c.warn },
+
+    DiffAdd       = { fg = c.git.add, reverse = true },
+    DiffChange    = { fg = c.git.modify },
+    DiffDelete    = { fg = c.git.remove, reverse = true },
+    DiffText      = { fg = c.git.modify, reverse = true },
 
 
     DiagnosticError          = { fg = c.err },
@@ -62,12 +73,38 @@ M.editor = {
     DiagnosticUnderlineInfo  = { undercurl = true, sp = c.info },
     DiagnosticUnderlineHint  = { undercurl = true, sp = c.hint },
     DiagnosticUnnecessary    = { fg = c.stealth_0, undercurl = true, sp = c.fg_1 },
+
+    -- LspReferenceText            = { bg = u.blend(c.grad_1, c.bg, 0.8) }, -- used for highlighting "text" references
+    -- LspReferenceRead            = { bg = u.blend(c.red, c.bg, 0.8) }, -- used for highlighting "read" references
+    -- LspReferenceWrite           = { bg = u.blend(c.green, c.bg, 0.8) }, -- used for highlighting "write" references
 }
 
 
-M.treesitter = {
-    ['@comment']       = { fg = c.stealth_2 },
-    ['@operator']      = { fg = c.grad_0 },
+M.syntax = {
+    Character  = { fg = c.red },
+    Constant   = { fg = c.fg_1 },
+    Delimiter  = { fg = c.grad_0 },
+    Function   = { fg = c.grad_3 },
+    Identifier = { fg = c.fg_2 },
+    Keyword    = { fg = c.grad_0 },
+    Operator   = { fg = c.grad_0 },
+    PreProc    = { fg = c.grad_0 },
+    Special    = { fg = c.grad_3 },
+    String     = { fg = c.green },
+    Type       = { fg = c.grad_1 },
+    Statement  = { fg = c.grad_0 },
+
+
+    htmlH1 = { fg = c.fg_2 },
+    htmlH2 = { fg = c.grad_0 },
+    htmlH3 = { fg = c.grad_1 },
+    htmlH4 = { fg = c.grad_2 },
+    htmlH5 = { fg = c.grad_3 },
+
+
+    -- treesitter highlights
+    ['@comment']       = { fg = c.stealth_2, italic = true },
+    ['@operator']      = { fg = c.grad_0, },
     ['@punctuation']   = { fg = c.grad_0 },
     ['@keyword']       = { fg = c.grad_0 },
     ['@type']          = { fg = c.grad_1 },
@@ -83,21 +120,46 @@ M.treesitter = {
     ['@function.call'] = { fg = c.grad_3 },
     ['@string']        = { fg = c.green },
     ['@module']        = { fg = c.grad_2 },
+
+
+    ['@markup.heading.1']  = { fg = c.fg_2 },
+    ['@markup.heading.2']  = { fg = c.grad_0 },
+    ['@markup.heading.3']  = { fg = c.grad_1 },
+    ['@markup.heading.4']  = { fg = c.grad_2 },
+    ['@markup.heading.5']  = { fg = c.grad_3 },
+    ['@markup.link']       = { fg = c.fg_2 },
+    ['@markup.link.label'] = { fg = c.grad_3, underline = true },
+    ['@markup.raw'] = { fg = c.grad_3 },
+    ['@markup.list'] = { fg = c.orange },
+    ['@markup.list.checked'] = { fg = c.yellow },
+    ['@markup.list.unchecked'] = { fg = c.yellow },
+    ['@markup.strikethrough'] = { strikethrough = true },
 }
 
 M.plugins = {
     NoiceCmdlinePopupTitle        = { fg = c.fg_1 },
     NoiceCmdlinePopupBorder       = { fg = c.border_2 },
     NoiceCmdlinePopupBorderSearch = { fg = c.border_2 },
-    TelescopeBorder               = { fg = c.border_2 },
+
+    TelescopeNormal               = { fg = c.fg_1 },
+    TelescopeBorder               = { fg = c.border_1 },
+    TelescopePromptTitle          = { fg = c.fg_2 },
+    TelescopePromptPrefix         = { fg = c.grad_3 },
+    TelescopeMatching             = { fg = c.grad_3 },
+    TelescopePreviewDirectory     = { fg = c.grad_1 },
+    TelescopeSelectionCaret       = { fg = c.red },
+    TelescopeMultiSelection       = { fg = c.fg_2, bold = true },
+
     CmpItemAbbr                   = { fg = c.fg_1 },
     CmpItemAbbrMatch              = { fg = c.fg_2, bold = true },
     CmpItemAbbrMatchFuzzy         = { link = "CmpItemAbbrMatch" },
     CmpItemKind                   = { fg = c.grad_3 },
     CmpItemMenu                   = { fg = c.grad_0 },
+
     GitSignsAdd                   = { fg = c.git.add },
     GitSignsChange                = { fg = c.git.modify },
     GitSignsDelete                = { fg = c.git.remove },
+
     NeogitDiffAdd                 = { fg = c.bg, bg = c.git.add },
     NeogitDiffDelete              = { fg = c.bg, bg = c.git.remove },
     NeogitDiffAddHighlight        = { link = "NeogitDiffAdd" },
@@ -108,6 +170,19 @@ M.plugins = {
     NeogitDiffDeletions           = { fg = c.git.remove },
     NeogitCommitViewHeader        = { fg = c.yellow },
     NeogitCommitViewDescription   = { fg = c.grad_0 },
+
+
+    MarkViewHeading1          = { fg = c.fg_2, bg = c.selection },
+    MarkViewHeading2          = { fg = c.grad_0, bg = c.selection },
+    MarkViewHeading3          = { fg = c.grad_1, bg = c.selection },
+    MarkViewHeading4          = { fg = c.grad_2, bg = c.selection },
+    MarkViewHeading5          = { fg = c.grad_3, bg = c.selection },
+    MarkViewHeading6          = { fg = c.green, bg = c.selection },
+    MarkViewListItemMinus     = { fg = c.orange },
+    MarkViewListItemPlus      = { fg = c.orange },
+    MarkViewListItemStar      = { fg = c.orange },
+    MarkviewCheckboxUnchecked = { fg = c.yellow },
+    MarkviewCheckboxChecked   = { fg = c.yellow },
 }
 
 vim.g.terminal_color_0 = c.stealth_0
