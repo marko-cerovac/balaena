@@ -9,23 +9,23 @@ M.normal = {
 }
 
 M.insert = {
-    a = { fg = c.green },
+    a = { fg = c.green, bg = c.bg_alt_1 },
 }
 
 M.visual = {
-    a = { fg = c.purple },
+    a = { fg = c.purple, bg = c.bg_alt_1 },
 }
 
 M.replace = {
-    a = { fg = c.red },
+    a = { fg = c.red, bg = c.bg_alt_1 },
 }
 
 M.command = {
-    a = { fg = c.yellow },
+    a = { fg = c.yellow, bg = c.bg_alt_1 },
 }
 
 M.inactive = {
-    a = { fg = c.fg_0 },
+    a = { fg = c.fg_0, bg = c.bg_alt_1 },
 }
 
 return M
