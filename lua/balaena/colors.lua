@@ -1,11 +1,12 @@
 local colors = {
     -- editor colors
-    bg     = "#141a23",
-    bg_alt = "#19202c",
+    bg        = "#141a23",
+    bg_alt_0  = "#11161e", -- darker background
+    bg_alt_1  = "#19212d", -- lighter background
 
-    fg_0   = "#bfe3fa",
-    fg_1   = "#d2ebfb",
-    fg_2   = "#e3f5ff",
+    fg_0      = "#bfe3fa",
+    fg_1      = "#d2ebfb",
+    fg_2      = "#e3f5ff",
 
     cursor    = "#e4f8ff",
     cursor_ln = "#1b212d",
@@ -15,26 +16,26 @@ local colors = {
     stealth_1 = "#3b4154", -- used for line numbers
     stealth_2 = "#444b65", -- used for comments
 
-    border_0 = "#1e242f", -- discrete border, just visible enough to be present (used for window splits)
-    border_1 = "#242b38", -- a slightly more visible border for floating windows that need to blend in
-    border_2 = "#364155", -- lighter, clearly visible border (used most often)
+    border_0  = "#1e242f", -- discrete border, just visible enough to be present (used for window splits)
+    border_1  = "#242b38", -- a slightly more visible border for floating windows that need to blend in
+    border_2  = "#364155", -- lighter, clearly visible border (used most often)
 
-    grad_0 = "#98a0e1", -- also used as blue
-    grad_1 = "#a0b7e1",
-    grad_2 = "#a0d2e1",
-    grad_3 = "#99e2d7", -- also used as cyan
+    grad_0    = "#98a0e1", -- also used as blue
+    grad_1    = "#a0b7e1",
+    grad_2    = "#a0d2e1",
+    grad_3    = "#99e2d7", -- also used as cyan
 
-    red    = "#e68686",
-    orange = "#e8ae94",
-    yellow = "#e4e8a6",
-    green  = "#aae7b4",
-    purple = "#d0aae2",
+    red       = "#e68686",
+    orange    = "#e8ae94",
+    yellow    = "#e4e8a6",
+    green     = "#aae7b4",
+    purple    = "#d0aae2",
 
     -- TODO: choose different colors
-    err  = "#eb6d85",
-    warn = "#dcd080",
+    err       = "#eb6d85",
+    warn      = "#dcd080",
 
-    git = {
+    git       = {
         add    = "#a1f4a8",
         modify = "#9bf0f3",
         remove = "#f5a1a1",

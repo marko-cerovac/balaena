@@ -8,9 +8,9 @@ if vim.g.colors_name then
     vim.cmd "hi clear"
 end
 
-vim.g.colors_name = "balaena"
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
+vim.opt.background    = "dark"
+vim.g.colors_name     = "balaena"
 
 for k, v in pairs(hl.editor) do
     vim.api.nvim_set_hl(0, k, v)
