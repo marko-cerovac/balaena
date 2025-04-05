@@ -18,7 +18,7 @@ M.editor = {
     StatusLineNC  = { fg = c.stealth_0 },
     Visual        = { bg = c.selection },
     CursorLine    = { bg = c.cursor_ln },
-    CursorColumn  = { link = "CursorLine" },
+    CursorColumn  = { link = 'CursorLine' },
     ColorColumn   = { bg = c.cursor_ln },
 
     PMenu         = { fg = c.fg_1, bg = c.bg_alt_1 },
@@ -44,6 +44,8 @@ M.editor = {
     Ignore        = { fg = c.stealth_0 },
     FloatTitle    = { fg = c.fg_2 },
     Title         = { fg = c.fg_2 },
+    SpellBad      = { undercurl = true, sp = c.grad_1 },
+    SpellCap      = { undercurl = true, sp = c.stealth_2 },
     -- qfFileName
     -- qfLineNr
 
@@ -61,29 +63,30 @@ M.editor = {
     DiagnosticWarn           = { fg = c.warn },
     DiagnosticInfo           = { fg = c.info },
     DiagnosticHint           = { fg = c.hint },
-    DiagnosticSignError      = { link = "DiagnosticError" },
-    DiagnosticSignWarn       = { link = "DiagnosticWarn" },
-    DiagnosticSignInfo       = { link = "DiagnosticInfo" },
-    DiagnosticSignHint       = { link = "DiagnosticHint" },
-    DiagnosticFloatingError  = { link = "DiagnosticError" },
-    DiagnosticFloatingWarn   = { link = "DiagnosticWarn" },
-    DiagnosticFloatingInfo   = { link = "DiagnosticInfo" },
-    DiagnosticFloatingHint   = { link = "DiagnosticHint" },
+    DiagnosticSignError      = { link = 'DiagnosticError' },
+    DiagnosticSignWarn       = { link = 'DiagnosticWarn' },
+    DiagnosticSignInfo       = { link = 'DiagnosticInfo' },
+    DiagnosticSignHint       = { link = 'DiagnosticHint' },
+    DiagnosticFloatingError  = { link = 'DiagnosticError' },
+    DiagnosticFloatingWarn   = { link = 'DiagnosticWarn' },
+    DiagnosticFloatingInfo   = { link = 'DiagnosticInfo' },
+    DiagnosticFloatingHint   = { link = 'DiagnosticHint' },
     DiagnosticUnderlineError = { undercurl = true, sp = c.err },
     DiagnosticUnderlineWarn  = { undercurl = true, sp = c.warn },
     DiagnosticUnderlineInfo  = { undercurl = true, sp = c.info },
     DiagnosticUnderlineHint  = { undercurl = true, sp = c.hint },
     DiagnosticUnnecessary    = { fg = c.stealth_0, undercurl = true, sp = c.fg_1 },
 
-    -- LspReferenceText            = { bg = u.blend(c.grad_1, c.bg, 0.8) }, -- used for highlighting "text" references
-    -- LspReferenceRead            = { bg = u.blend(c.red, c.bg, 0.8) }, -- used for highlighting "read" references
-    -- LspReferenceWrite           = { bg = u.blend(c.green, c.bg, 0.8) }, -- used for highlighting "write" references
+    -- LspReferenceText            = { bg = u.blend(c.grad_1, c.bg, 0.8) }, -- used for highlighting 'text' references
+    -- LspReferenceRead            = { bg = u.blend(c.red, c.bg, 0.8) }, -- used for highlighting 'read' references
+    -- LspReferenceWrite           = { bg = u.blend(c.green, c.bg, 0.8) }, -- used for highlighting 'write' references
 }
 
 
 M.syntax = {
     Character  = { fg = c.red },
     Constant   = { fg = c.fg_1 },
+    Comment    = { fg = c.stealth_2 },
     Delimiter  = { fg = c.grad_0 },
     Function   = { fg = c.grad_3 },
     Identifier = { fg = c.fg_2 },
@@ -155,7 +158,7 @@ M.plugins = {
 
     CmpItemAbbr                 = { fg = c.fg_1 },
     CmpItemAbbrMatch            = { fg = c.fg_2, bold = true },
-    CmpItemAbbrMatchFuzzy       = { link = "CmpItemAbbrMatch" },
+    CmpItemAbbrMatchFuzzy       = { link = 'CmpItemAbbrMatch' },
     CmpItemKind                 = { fg = c.grad_3 },
     CmpItemMenu                 = { fg = c.grad_0 },
 
@@ -170,8 +173,8 @@ M.plugins = {
 
     NeogitDiffAdd               = { fg = c.bg, bg = c.git.add },
     NeogitDiffDelete            = { fg = c.bg, bg = c.git.remove },
-    NeogitDiffAddHighlight      = { link = "NeogitDiffAdd" },
-    NeogitDiffDeleteHighlight   = { link = "NeogitDiffDelete" },
+    NeogitDiffAddHighlight      = { link = 'NeogitDiffAdd' },
+    NeogitDiffDeleteHighlight   = { link = 'NeogitDiffDelete' },
     NeogitDiffAddCursor         = { fg = c.git.add },
     NeogitDiffDeleteCursor      = { fg = c.git.remove },
     NeogitDiffAdditions         = { fg = c.git.add },
@@ -193,6 +196,7 @@ M.plugins = {
     MarkViewListItemStar      = { fg = c.orange },
     MarkviewCheckboxUnchecked = { fg = c.yellow },
     MarkviewCheckboxChecked   = { fg = c.yellow },
+    MarkviewBlockQuoteDefault = { fg = c.grad_0 },
 }
 
 vim.g.terminal_color_0 = c.stealth_0

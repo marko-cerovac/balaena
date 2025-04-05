@@ -8,9 +8,9 @@ local colors = {
     fg_1      = "#d2ebfb",
     fg_2      = "#e3f5ff",
 
-    cursor    = "#e4f8ff",
-    cursor_ln = "#1b212d",
-    selection = "#232b3a",
+    cursor    = "#e4f8ff", -- cursor color
+    cursor_ln = "#1b212d", -- cursorline background
+    selection = "#232b3a", -- visual selection background
 
     stealth_0 = "#353a4d", -- used for things that are disabled
     stealth_1 = "#3b4154", -- used for line numbers
@@ -31,7 +31,7 @@ local colors = {
     green     = "#aae7b4",
     purple    = "#d0aae2",
 
-    -- TODO: choose different colors
+    -- open for change
     err       = "#eb6d85",
     warn      = "#dcd080",
 
