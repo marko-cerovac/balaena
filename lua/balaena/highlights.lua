@@ -5,8 +5,8 @@ local c = require 'balaena.colors'
 local M  = {}
 
 M.editor = {
-    Normal        = { bg = c.bg, fg = c.fg_2 },
-    NormalFloat   = { bg = c.bg, fg = c.fg_2 },
+    Normal        = { bg = c.bg, fg = c.fg_1 },
+    NormalFloat   = { bg = c.bg, fg = c.fg_1 },
 
     FloatBorder   = { fg = c.border_2, bg = c.bg },
     WinSeparator  = { fg = c.border_0 },
@@ -87,16 +87,21 @@ M.syntax = {
     Character  = { fg = c.red },
     Constant   = { fg = c.fg_1 },
     Comment    = { fg = c.stealth_2 },
+    Identifier = { fg = c.fg_2 },
     Delimiter  = { fg = c.grad_0 },
     Function   = { fg = c.grad_3 },
-    Identifier = { fg = c.fg_2 },
     Keyword    = { fg = c.grad_0 },
     Operator   = { fg = c.grad_0 },
+    Number     = { fg = c.orange },
+    Float      = { fg = c.orange },
+    Boolean    = { fg = c.orange },
     PreProc    = { fg = c.grad_0 },
     Special    = { fg = c.grad_3 },
     String     = { fg = c.green },
     Type       = { fg = c.grad_1 },
     Statement  = { fg = c.grad_0 },
+    Error      = { undercurl = true, sp = c.err },
+    Todo       = { fg = c.yellow },
 
 
     -- treesitter highlights
@@ -168,8 +173,39 @@ M.plugins = {
 
     DapBreakpoint               = { fg = c.red },
     DapBreakpointCondition      = { fg = c.orange },
-    DapStoped                   = { fg = c.yellow },
+    DapStopped                  = { fg = c.yellow },
     DapLogPoint                 = { fg = c.purple },
+
+    DapUINormal                 = { bg = c.bg_alt_0 },
+    DapUIDecoration             = { fg = c.grad_3 },
+    DapUIType                   = { fg = c.grad_1 },
+    DapUIScope                  = { fg = c.green },
+    DapUIBreakpointsPath        = { fg = c.grad_3 },
+    DapUIStoppedThread          = { fg = c.grad_2 },
+    DapUIWatchesValue           = { fg = c.grad_0 },
+    DapUIWatchesEmpty           = { fg = c.red },
+    DapUIWatchesError           = { fg = c.err },
+    DapUICurrentFrameName       = { fg = c.grad_2 },
+    DapUISource                 = { fg = c.grad_0 },
+    DapUILineNumber             = { fg = c.purple },
+    DapUIBreakpointsCurrentLine = { fg = c.yellow },
+    DapUIUnavailable            = { fg = c.stealth_0 },
+    DapUIModifiedValue          = { fg = c.orange},
+    DapUIPlayPause              = { fg = c.green },
+    DapUIStop                   = { fg = c.red },
+    DapUIRestart                = { fg = c.green },
+    DapUIStepOut                = { fg = c.grad_0 },
+    DapUIStepBack               = { fg = c.grad_0 },
+    DapUIStepInto               = { fg = c.grad_0 },
+    DapUIStepOver               = { fg = c.grad_0 },
+    DapUIPlayPauseNC            = { link = 'DapUIPlayPause' },
+    DapUIStopNC                 = { link = 'DapUIStop' },
+    DapUIRestartNC              = { link = 'DapUIRestart' },
+    DapUIStepOutNC              = { link = 'DapUIStepOut' },
+    DapUIStepBackNC             = { link = 'DapUIStepBack' },
+    DapUIStepIntoNC             = { link = 'DapUIStepInto' },
+    DapUIStepOverNC             = { link = 'DapUIStepOver' },
+    DapUIFloatBorder            = { link = 'FloatBorder' },
 
     NeogitDiffAdd               = { fg = c.bg, bg = c.git.add },
     NeogitDiffDelete            = { fg = c.bg, bg = c.git.remove },
@@ -181,9 +217,18 @@ M.plugins = {
     NeogitDiffDeletions         = { fg = c.git.remove },
     NeogitCommitViewHeader      = { fg = c.yellow },
     NeogitCommitViewDescription = { fg = c.grad_0 },
+    NeogitHunkHeader            = { bg = c.stealth_1 },
 
     TroubleIndent               = { fg = c.border_2 },
 
+    LazySpecial                 = { fg = c.grad_3 },
+    LazyReasonPlugin            = { fg = c.grad_2 },
+    LazyReasonKeys              = { fg = c.grad_0 },
+
+
+    MasonHighlight              = { fg = c.grad_2 },
+    MasonMuted                  = { fg = c.stealth_0 },
+    MasonHeading                = { fg = c.fg_2 },
 
     MarkViewHeading1          = { fg = c.fg_2, bg = u.blend(c.fg_2, c.bg, 0.1) },
     MarkViewHeading2          = { fg = c.green, bg = u.blend(c.green, c.bg, 0.1) },
