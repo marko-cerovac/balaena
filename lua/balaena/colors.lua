@@ -1,12 +1,14 @@
 local colors = {
     -- editor colors
-    bg        = "#141a23",
-    bg_alt_0  = "#11161e", -- darker background
-    bg_alt_1  = "#19212d", -- lighter background
+    bg       = "#141a23",
+    bg_alt_0 = "#11161e",  -- darker background
+    bg_alt_1 = "#19212d",  -- lighter background
 
-    fg_0      = "#bfe3fa",
-    fg_1      = "#d2ebfb",
-    fg_2      = "#e3f5ff",
+    fg_0 = "#a5b7ca", -- darker text
+    fg_1 = "#bacfe2", -- slightly darker text
+    fg_2 = "#cce4f1", -- normal text
+    fg_3 = "#e3f5ff", -- for titles and headings
+
 
     cursor    = "#e4f8ff", -- cursor color
     cursor_ln = "#1b212d", -- cursorline background

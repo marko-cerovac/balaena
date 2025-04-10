@@ -5,8 +5,8 @@ local c = require 'balaena.colors'
 local M  = {}
 
 M.editor = {
-    Normal        = { bg = c.bg, fg = c.fg_1 },
-    NormalFloat   = { bg = c.bg, fg = c.fg_1 },
+    Normal        = { bg = c.bg, fg = c.fg_2 },
+    NormalFloat   = { bg = c.bg, fg = c.fg_2 },
 
     FloatBorder   = { fg = c.border_2, bg = c.bg },
     WinSeparator  = { fg = c.border_0 },
@@ -27,7 +27,7 @@ M.editor = {
     PMenuKind     = { fg = c.grad_2 },
 
     LineNr        = { fg = c.stealth_1 },
-    CursorLineNr  = { fg = c.fg_2 },
+    CursorLineNr  = { fg = c.fg_3 },
     Search        = { fg = c.bg, bg = c.fg_0 },
     IncSearch     = { fg = c.bg, bg = c.fg_0, bold = true },
     CurSearch     = { fg = c.bg, bg = c.yellow },
@@ -42,8 +42,8 @@ M.editor = {
     Whitespace    = { fg = c.stealth_0 },
     MoreMsg       = { fg = c.fg_1 },
     Ignore        = { fg = c.stealth_0 },
-    FloatTitle    = { fg = c.fg_2 },
-    Title         = { fg = c.fg_2 },
+    FloatTitle    = { fg = c.fg_3 },
+    Title         = { fg = c.fg_3 },
     SpellBad      = { undercurl = true, sp = c.grad_1 },
     SpellCap      = { undercurl = true, sp = c.stealth_2 },
     -- qfFileName
@@ -125,7 +125,7 @@ M.syntax = {
     ['@module']        = { fg = c.grad_2 },
 
 
-    ['@markup.heading.1']      = { fg = c.fg_2 },
+    ['@markup.heading.1']      = { fg = c.fg_3 },
     ['@markup.heading.2']      = { fg = c.green },
     ['@markup.heading.3']      = { fg = c.grad_3 },
     ['@markup.heading.4']      = { fg = c.grad_2 },
@@ -149,8 +149,8 @@ M.syntax = {
 M.plugins = {
     TelescopeNormal             = { fg = c.fg_1 },
     TelescopeBorder             = { fg = c.border_1 },
-    TelescopeTitle              = { fg = c.fg_2 },
-    TelescopePromptTitle        = { fg = c.fg_2 },
+    TelescopeTitle              = { fg = c.fg_3 },
+    TelescopePromptTitle        = { fg = c.fg_3 },
     TelescopePromptPrefix       = { fg = c.grad_3 },
     TelescopeMatching           = { fg = c.grad_3 },
     TelescopePreviewDirectory   = { fg = c.grad_1 },
@@ -158,7 +158,7 @@ M.plugins = {
     TelescopeMultiSelection     = { fg = c.fg_2, bold = true },
 
     MiniNotifyBorder            = { fg = c.border_1 },
-    MiniNotifyTitle             = { fg = c.fg_2, bold = true },
+    MiniNotifyTitle             = { fg = c.fg_3, bold = true },
     MiniIndentScopeSymbol       = { fg = c.border_2 },
 
     CmpItemAbbr                 = { fg = c.fg_1 },
@@ -228,9 +228,9 @@ M.plugins = {
 
     MasonHighlight              = { fg = c.grad_2 },
     MasonMuted                  = { fg = c.stealth_0 },
-    MasonHeading                = { fg = c.fg_2 },
+    MasonHeading                = { fg = c.fg_3 },
 
-    MarkViewHeading1          = { fg = c.fg_2, bg = u.blend(c.fg_2, c.bg, 0.1) },
+    MarkViewHeading1          = { fg = c.fg_3, bg = u.blend(c.fg_3, c.bg, 0.1) },
     MarkViewHeading2          = { fg = c.green, bg = u.blend(c.green, c.bg, 0.1) },
     MarkViewHeading3          = { fg = c.grad_3, bg = u.blend(c.grad_3, c.bg, 0.1) },
     MarkViewHeading4          = { fg = c.grad_2, bg = u.blend(c.grad_2, c.bg, 0.1) },
@@ -259,6 +259,6 @@ vim.g.terminal_color_11 = c.yellow
 vim.g.terminal_color_12 = c.grad_0
 vim.g.terminal_color_13 = c.purple
 vim.g.terminal_color_14 = c.grad_3
-vim.g.terminal_color_15 = c.fg_2
+vim.g.terminal_color_15 = c.fg_3
 
 return M
