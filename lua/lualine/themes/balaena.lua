@@ -3,17 +3,17 @@ local c = require 'balaena.colors'
 local M = {}
 
 M.normal = {
-    a = { fg = c.grad_2, bg = c.bg_alt_1 },
-    b = { fg = c.fg_1, bg = c.bg_alt_0 },
-    c = { fg = c.fg_2, bg = c.bg },
+    a = { fg = c.grad_3, bg = c.bg_alt_1 },
+    b = { fg = c.fg_2, bg = c.bg_alt_0 },
+    c = { fg = c.fg_1, bg = c.bg },
 }
 
 M.insert = {
-    a = { fg = c.green, bg = c.bg_alt_1 },
+    a = { fg = c.grad_1, bg = c.bg_alt_1 },
 }
 
 M.visual = {
-    a = { fg = c.purple, bg = c.bg_alt_1 },
+    a = { fg = c.grad_0, bg = c.bg_alt_1 },
 }
 
 M.replace = {
@@ -26,6 +26,10 @@ M.command = {
 
 M.inactive = {
     a = { fg = c.fg_0, bg = c.bg_alt_1 },
+}
+
+M.terminal = {
+    a = { fg = c.green, bg = c.bg_alt_1 },
 }
 
 return M
