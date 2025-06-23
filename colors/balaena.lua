@@ -1,12 +1,14 @@
-package.loaded["balaena.colors"] = nil
+package.loaded["balaena.colors"]     = nil
 package.loaded["balaena.highlights"] = nil
-package.loaded["balaena.utils"] = nil
+package.loaded["balaena.utils"]      = nil
+
 
 local hl = require 'balaena.highlights'
 
-if vim.g.colors_name then
-    vim.cmd "hi clear"
-end
+-- if vim.g.colors_name then
+--     vim.cmd "hi clear"
+-- end
+
 
 vim.opt.termguicolors = true
 vim.opt.background    = "dark"
@@ -20,6 +22,8 @@ for k, v in pairs(hl.syntax) do
     vim.api.nvim_set_hl(0, k, v)
 end
 
-for k, v in pairs(hl.plugins) do
-    vim.api.nvim_set_hl(0, k, v)
-end
+vim.schedule(function()
+    for k, v in pairs(hl.plugins) do
+        vim.api.nvim_set_hl(0, k, v)
+    end
+end)
