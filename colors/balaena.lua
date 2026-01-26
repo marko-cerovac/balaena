@@ -2,13 +2,12 @@ package.loaded["balaena.colors"]     = nil
 package.loaded["balaena.highlights"] = nil
 package.loaded["balaena.utils"]      = nil
 
+vim.cmd 'highlight clear'
+if vim.fn.exists 'syntax on' then
+        vim.cmd 'syntax reset'
+end
 
 local hl = require 'balaena.highlights'
-
--- if vim.g.colors_name then
---     vim.cmd "hi clear"
--- end
-
 
 vim.opt.termguicolors = true
 vim.opt.background    = "dark"
