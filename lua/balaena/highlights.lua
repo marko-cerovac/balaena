@@ -17,7 +17,7 @@ M.editor = {
     Visual                 = { bg = c.selection },
     CursorLine             = { bg = c.cursor_ln },
     CursorColumn           = { link = 'CursorLine' },
-    ColorColumn            = { bg = c.cursor_ln },
+    ColorColumn            = { bg = c.bg_alt_0 },
 
     StatusLine             = { fg = c.fg_1, bg = c.bg },
     StatusLineNC           = { fg = c.stealth_0 },
