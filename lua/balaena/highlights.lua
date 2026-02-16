@@ -106,7 +106,7 @@ M.editor = {
 
 
 M.syntax = {
-    Character  = { fg = c.red },
+    Character  = { fg = c.orange },
     Constant   = { fg = c.fg_1 },
     Comment    = { fg = c.stealth_2 },
     Identifier = { fg = c.fg_2 },
@@ -162,6 +162,8 @@ M.syntax = {
     ['@markup.list.checked']   = { fg = c.yellow },
     ['@markup.list.unchecked'] = { fg = c.yellow },
     ['@markup.strikethrough']  = { strikethrough = true },
+
+    ['@punctuation.special.markdown']  = { fg = c.border_2 },
 
     ['@tag.delimiter.html']    = { fg = c.grad_0 },
     ['@tag.attribute.html']    = { fg = c.fg_2 },
